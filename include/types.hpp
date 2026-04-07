@@ -65,4 +65,21 @@ namespace nyabi
         PhotoMetadata metadata;
         std::vector<CropResult> crops;
     };
-}
+
+    // -- Configs --
+    struct Config
+    {
+        std::filesystem::path detector_model_path;
+        std::filesystem::path embedder_model_path;
+        std::filesystem::path db_path;
+        std::filesystem::path output_root;
+
+        float detection_confidence_threshold = 0.5f;
+        float color_histogram_threshold = 0.30f;
+        float similarity_threshold = 0.75f;
+
+        int detector_input_size = 640;
+        int embedder_input_size = 224;
+        int hsv_bins = 16;
+    };
+} // namespace nyabi

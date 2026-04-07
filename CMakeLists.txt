@@ -29,7 +29,9 @@ set(SQLITECPP_RUN_CPPLINT OFF CACHE BOOL "" FORCE)
 set(SQLITECPP_INTERNAL_SQLITE ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(SQLiteCpp)
 
-add_executable(nyabi-f src/main.cpp)
+add_executable(nyabi-f
+        src/main.cpp
+        include/types.hpp)
 
 target_include_directories(nyabi-f PRIVATE include)
 
