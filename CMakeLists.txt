@@ -31,7 +31,9 @@ FetchContent_MakeAvailable(SQLiteCpp)
 
 add_executable(nyabi-f
         src/main.cpp
-        include/types.hpp)
+        include/types.hpp
+        include/raw_decoder.hpp
+        src/raw_decoder.cpp)
 
 target_include_directories(nyabi-f PRIVATE include)
 
